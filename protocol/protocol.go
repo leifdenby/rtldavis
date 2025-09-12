@@ -82,7 +82,7 @@ func NewParser(symbolLength int, tf string) (p Parser) {
 
 	if tf == "EU" {
 		p.channels = []int{ 
-			868077250, 868197250, 868317250, 868437250, 868557250, // EU test 20190324
+			868065300, 868187500, 868306200, 868545400, 868542000, // 2025-09-12 estimated with gqrx
 		}
 		p.ChannelCount = len(p.channels)
 		p.hopIdx = rand.Intn(p.ChannelCount)

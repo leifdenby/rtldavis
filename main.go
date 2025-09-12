@@ -43,7 +43,7 @@ import (
     "strconv"
     "fmt"
 
-    "github.com/lheijst/rtldavis/protocol"
+    "github.com/leifdenby/rtldavis/protocol"
     "github.com/jpoirier/gortlsdr"
 )
 const maxTr = 8

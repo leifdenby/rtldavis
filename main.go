@@ -151,7 +151,10 @@ func init() {
 	verbose = flag.Bool("v", false, "emit verbose debug messages")
 	disableAfc = flag.Bool("noafc", false, "disable any AFC")
 	deviceString = flag.String("d", "0", "device serial number or device index")
-	serverSrv = flag.String("gs", "", "decode packets and send to server server")
+	flag.Func("gs", "decode packets and send to server", func(s string) error {
+	    serverSrv = &s
+	    return nil
+	})
 
 	flag.Parse()
 	protocol.Verbose = *verbose
